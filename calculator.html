@@ -1,0 +1,107 @@
+<html>
+
+<head>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+		* {
+			font-family: Arial;
+		}
+
+		.container-fluid {
+			background-repeat: repeat;
+			height: 100%;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+
+		header {
+			margin-bottom: 30px;
+		}
+
+		.shadowed {
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+		}
+
+		h1 {
+			text-align: left;
+			width: 100%;
+		}
+
+		hr {
+			border-top: 1px solid #525252;
+		}
+
+		select,
+		input {
+			max-width: 600px;
+			font-size: 20px !important;
+		}
+
+		select option {
+			font-size: 20px;
+		}
+
+		.pink {
+			background-color: #c55;
+		}
+
+		.green {
+			background-color: #5c5;
+		}
+
+		.padded {
+			padding: 30px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<header class="padded shadowed">
+			<h1>The Amazing Tel-Hai Survivors Base Converting Calculator</h1>
+		</header>
+		<div class="row">
+			<div class="shadowed col-8 col-xs-8 col-offset-2 col-xs-offset-2 padded">
+				<h1>Select Base</h1>
+				<hr />
+				<select id="select" class="form-control">
+					<option value='2'>two</option>
+					<option value='3'>three</option>
+					<option value='4'>four</option>
+					<option value='5'>five</option>
+					<option value='6'>six</option>
+					<option value='7'>seven</option>
+					<option value='8'>eight</option>
+					<option value='9'>nine</option>
+					<option value='10' selected="selected">ten</option>
+				</select>
+				<h1 id="selectMessage"></h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="shadowed col-8 col-xs-8 col-offset-2 col-xs-offset-2 padded">
+				<h1>Enter number to convert</h1>
+				<hr />
+				<div class="col-6 col-xs-6">
+					<input class="form-control pull-left" id="input" />
+				</div>
+				<div class="col-6 col-xs-6">
+					<button class="btn btn-primary pull-left" id="button" onclick="checkAndConvert()">Convert!</button>
+					<script src="funcs.js"></script>
+				</div>
+				<div class="col-12 col-xs-12">
+					<br />
+					<br />
+					<h1 id="checkConvertion"></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

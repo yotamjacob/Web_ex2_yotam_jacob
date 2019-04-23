@@ -1,0 +1,90 @@
+<html>
+
+<head>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+		* {
+			font-family: Arial;
+		}
+
+		.container-fluid {
+			background-repeat: repeat;
+			height: 100%;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+
+		header {
+			margin-bottom: 30px;
+		}
+
+		.shadowed {
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+		}
+
+		h1 {
+			text-align: left;
+			width: 100%;
+		}
+
+		hr {
+			border-top: 1px solid #525252;
+		}
+
+		select,
+		input {
+			max-width: 600px;
+			font-size: 20px !important;
+		}
+
+		select option {
+			font-size: 20px;
+		}
+
+		.pink {
+			background-color: #c55;
+		}
+
+		.green {
+			background-color: #5c5;
+		}
+
+		.padded {
+			padding: 30px;
+		}
+	</style>
+</head>
+
+<body>
+		<div>
+			<div class="shadowed col-8 col-xs-8 col-offset-2 col-xs-offset-2 black padded">
+			
+				<h1>Click "Generate" to receive encrypted password:</h1>
+				
+				<button class="btn btn-primary" onclick="newQuote()">Generate</button>
+				<h1 class="encrypt" id="Encrypted" ></h1>
+				<script src="funcs.js"></script>
+			</div>
+			
+			<div class="shadowed col-8 col-xs-8 col-offset-2 col-xs-offset-2 black padded">	
+				<h1>Enter the decrypted password and press Done:</h1>
+				<div class="col-6 col-xs-6">
+					<input class="form-control pull-left" id="input" />
+				</div>
+				<div class="col-6 col-xs-6">
+					<button class="btn btn-primary pull-left" onclick="checkPass()">Done</button>
+					<script src="funcs.js"></script>
+				</div>
+				<div class="col-12 col-xs-12">
+					<h1 id="checkPassword" class="animated"></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
